@@ -1,15 +1,45 @@
-# ⚽ Premier Predictor
+# Premier Predictor ⚽  
 
-**Premier Predictor** is a machine learning model designed to predict **Premier League** match outcomes based on historical data and team statistics.
-## 🌟 Features
-- **Data Processing**: Cleans and preprocesses match data for analysis.
-- **Feature Engineering**: Extracts relevant features such as team performance metrics, player statistics, and more.
-- **Predictive Modeling**: Utilizes machine learning algorithms to predict match outcomes.
-- **Evaluation Metrics**: Assesses model performance using accuracy, precision, recall, and F1-score.
-  
-## ⚙️ How It Works
-1️⃣ **Loads match data** from historical Premier League results.  
-2️⃣ **Processes and cleans data** using `pandas`.  
-3️⃣ **Trains a machine learning model** (`scikit-learn`) to predict match outcomes.  
-4️⃣ **Evaluates performance** using accuracy metrics.  
-5️⃣ **Generates predictions** for upcoming matches.
+Premier Predictor is a **web scraping and machine learning project** that predicts the winner of English Premier League matches. The project scrapes match data using **BeautifulSoup and requests**, processes the data using **pandas**, and trains a **Random Forest model** to predict match winners.
+
+## Features  
+- Scrapes EPL match results, scores, and shooting stats from [FBRef](https://fbref.com/en/)  
+- Cleans and structures data using **pandas**  
+- Generates **rolling averages** for past match performances  
+- Trains a **Random Forest** model to predict match outcomes  
+- Evaluates prediction accuracy and iteratively improves precision  
+
+## 🔍 How It Works  
+### ** 1. Web Scraping **  
+- Uses **requests** to fetch EPL standings and team URLs.  
+- Uses **BeautifulSoup** to parse HTML and extract links to individual team pages.  
+- Scrapes **match scores, shooting stats, and team performance history**.  
+
+### ** 2. Data Processing & Cleaning **  
+- Converts scraped HTML tables into **pandas DataFrames**.  
+- Computes **rolling averages** for key stats like shots, goals, and free kicks.  
+- Filters data to include **only Premier League matches**.  
+
+### ** 3. Machine Learning **  
+- Defines a **binary classification problem**: predicting if a team will win (1) or not (0).  
+- Trains a **Random Forest Classifier** using:  
+  - Venue (home/away)  
+  - Opponent team  
+  - Match hour & day  
+  - Rolling averages of past performance  
+- Evaluates performance using **precision score** to measure prediction accuracy.  
+
+### ** 4. Performance Improvements ⚡**  
+- Uses **rolling averages** to capture team **form** in recent matches.  
+- Merges **both sides of each match** to improve predictions.  
+- Optimizes model parameters for better precision.  
+
+## Results & Accuracy  
+to be done...
+
+
+## Future Improvements  
+Scrape **more seasons** to improve predictions.  
+Use **additional match statistics** (e.g., player injuries, lineups, weather).  
+Try **different machine learning models** (e.g., neural networks).  
+Analyze **home vs. away performance trends**.  
