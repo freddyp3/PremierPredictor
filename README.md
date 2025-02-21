@@ -9,18 +9,18 @@ Premier Predictor is a **web scraping and machine learning project** that predic
 - Trains a **Random Forest** model to predict match outcomes  
 - Evaluates prediction accuracy and iteratively improves precision  
 
-## 🔍 How It Works  
-### ** 1. Web Scraping **  
+## How It Works  
+### 1. Web Scraping  
 - Uses **requests** to fetch EPL standings and team URLs.  
 - Uses **BeautifulSoup** to parse HTML and extract links to individual team pages.  
 - Scrapes **match scores, shooting stats, and team performance history**.  
 
-### ** 2. Data Processing & Cleaning **  
+### 2. Data Processing & Cleaning 
 - Converts scraped HTML tables into **pandas DataFrames**.  
 - Computes **rolling averages** for key stats like shots, goals, and free kicks.  
 - Filters data to include **only Premier League matches**.  
 
-### ** 3. Machine Learning **  
+### 3. Machine Learning  
 - Defines a **binary classification problem**: predicting if a team will win (1) or not (0).  
 - Trains a **Random Forest Classifier** using:  
   - Venue (home/away)  
@@ -29,7 +29,7 @@ Premier Predictor is a **web scraping and machine learning project** that predic
   - Rolling averages of past performance  
 - Evaluates performance using **precision score** to measure prediction accuracy.  
 
-### ** 4. Performance Improvements ⚡**  
+### 4. Performance Improvements  
 - Uses **rolling averages** to capture team **form** in recent matches.  
 - Merges **both sides of each match** to improve predictions.  
 - Optimizes model parameters for better precision.  
