@@ -34,8 +34,9 @@ Premier Predictor is a **web scraping and machine learning project** that predic
 - Merges **both sides of each match** to improve predictions.  
 - Optimizes model parameters for better precision.  
 
-## Results & Accuracy  
-to be done...
+## Results
+53% Precision
+58% Accuracy
 
 
 ## Future Improvements  
